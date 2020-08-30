@@ -56,7 +56,7 @@ public class Pessoa {
 
 	public void exibirNome() {
 		this.nomeCompleto = this.nome + " " + this.sobrenome;
-		System.out.println("Seu nome é: " + this.nomeCompleto);
+		System.out.println("Seu nome Ã©: " + this.nomeCompleto);
 
 	}
 
@@ -73,7 +73,7 @@ public class Pessoa {
 
 	public void exibirObjto() {
 		if (pessoas.size() == 0) {
-			JOptionPane.showMessageDialog(null, "Nenhum usuário cadatrado!");
+			JOptionPane.showMessageDialog(null, "Nenhum usuÃ¡rio cadatrado!");
 		} else {
 			for (int i = 0; i < pessoas.size(); i++) {
 
@@ -88,7 +88,7 @@ public class Pessoa {
 	public void consultar(String n1) {
 		int aux = 0;
 		if (pessoas.size() == 0) {
-			JOptionPane.showMessageDialog(null, "Nenhum usuário cadatrado!");
+			JOptionPane.showMessageDialog(null, "Nenhum usuÃ¡rio cadatrado!");
 		} else {
 			for (int i = 0; i < pessoas.size(); i++) {
 				if (n1.equals(pessoas.get(i).getNome())) {
@@ -106,8 +106,8 @@ public class Pessoa {
 			}
 		}
 		if (aux == 0) {
-			System.out.println("Nome não encontrado");
-			JOptionPane.showMessageDialog(null, "Usuário não encontrado");
+			System.out.println("Nome nÃ£o encontrado");
+			JOptionPane.showMessageDialog(null, "UsuÃ¡rio nÃ£o encontrado");
 		}
 	}
 
@@ -116,7 +116,7 @@ public class Pessoa {
 		
 			
 		if (pessoas.size() == 0) {
-			JOptionPane.showMessageDialog(null, "Nenhum usuário cadatrado!");
+			JOptionPane.showMessageDialog(null, "Nenhum usuÃ¡rio cadatrado!");
 		}
 		 else {
 			for (int i = 0; i < pessoas.size(); i++) {
@@ -136,7 +136,7 @@ public class Pessoa {
 		}
 
 		if (aux == 0) {
-			JOptionPane.showMessageDialog(null, "Usuário não encontrado");
+			JOptionPane.showMessageDialog(null, "UsuÃ¡rio nÃ£o encontrado");
 		}
 		
 	}
@@ -144,30 +144,31 @@ public class Pessoa {
 	public void excluir(int n1) {
 		int aux = 0;
 		if (pessoas.size() == 0) {
-			JOptionPane.showMessageDialog(null, "Nenhum usuário cadatrado!");
+			JOptionPane.showMessageDialog(null, "Nenhum usuÃ¡rio cadatrado!");
 		} else {
 			for (int i = 0; i < pessoas.size(); i++) {
 				if (n1 == pessoas.get(i).getCpf()) {
 					aux = 1;
 
 					String aux2 = JOptionPane.showInputDialog(null,
-							"Usuário encontrado\nNome: " + pessoas.get(i).getNome() + "\nSobrenome: "
+							"UsuÃ¡rio encontrado\nNome: " + pessoas.get(i).getNome() + "\nSobrenome: "
 									+ pessoas.get(i).getSobrenome() + "\nCpf: " + pessoas.get(i).getCpf()
 									+ "\nNome completo: " + pessoas.get(i).getNomeCompleto()
 									+ "\n\nDeseja realmente excluir? S/N \n");
 					if (aux2.equals("s") || aux2.equals("S")) {
 						pessoas.remove(i);
-						JOptionPane.showMessageDialog(null, "Usuário excluido com sucesso!");
+						JOptionPane.showMessageDialog(null, "UsuÃ¡rio excluido com sucesso!");
 					}else {
-						JOptionPane.showMessageDialog(null, "Opção inválida");
+						JOptionPane.showMessageDialog(null, "OpÃ§Ã£o invÃ¡lida");
 					}
 				}
 			}
 		}
 
 		if (aux == 0) {
-			JOptionPane.showMessageDialog(null, "Usuário não encontrado");
+			JOptionPane.showMessageDialog(null, "UsuÃ¡rio nÃ£o encontrado");
 		}
 
 	}
 }
+//
